@@ -19,4 +19,7 @@ class EditarBuscarDeletarView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tarefa.objects.all()
     serializer_class = TarefaSerializer
 
-
+# API V2
+class TarefaView(viewsets.ModelViewSet):
+    queryset = Tarefa.objects.all()
+    serializer_class = TarefaSerializer
