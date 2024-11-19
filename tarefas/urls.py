@@ -15,4 +15,4 @@ urlpatterns = [
 
 # API V2
 router = routers.SimpleRouter()
-router.register(r'tarefas/', TarefaView, basename='crud-tarefa-view')
+router.register(r'tarefas', TarefaView, basename='crud-tarefa-view')
