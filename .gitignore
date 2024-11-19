@@ -1,2 +1,5 @@
 .venv
 resources
+.idea
+tarefas/migrations/__pycache__
+lista_de_tarefas/__pycache__
