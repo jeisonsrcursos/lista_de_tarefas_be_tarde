@@ -1,12 +1,16 @@
 from django.urls import path
 from rest_framework import routers
-
-from tarefas.tarefas_views import TarefasAPIViews
-from tarefas.views import ListarTarefaView, EditarBuscarDeletarView, TarefaView
+from tarefas.views import (
+    ListarTarefaView,
+    EditarBuscarDeletarView,
+    TarefaView
+)
 
 # API V1
 urlpatterns = [
-    path('tarefas/', ListarTarefaView.as_view(), name='listar-criar-tarefa-view'),
+    path('tarefas/',
+         ListarTarefaView.as_view(),
+         name='listar-criar-tarefa-view'),
     path('tarefas/<int:pk>',
          EditarBuscarDeletarView.as_view(),
          name='editar-buscar-deletar-view'
@@ -15,4 +19,8 @@ urlpatterns = [
 
 # API V2
 router = routers.SimpleRouter()
-router.register(r'tarefas', TarefaView, basename='crud-tarefa-view')
+router.register(
+    r'tarefas',
+    TarefaView,
+    basename='crud-tarefa-view'
+)
